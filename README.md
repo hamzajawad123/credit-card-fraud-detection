@@ -185,15 +185,6 @@ jupyter notebook notebooks/Credit_Card_Fraud_Detection.ipynb
 
 ---
 
-## 🤝 Connect
-
-Built by **[Your Name]**
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://linkedin.com/in/YOUR_PROFILE)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github)](https://github.com/YOUR_USERNAME)
-
----
-
 ## 📄 License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
