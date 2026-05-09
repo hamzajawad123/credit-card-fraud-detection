@@ -1,0 +1,23 @@
+# ──────────────────────────────────────────────────────────────
+# Credit Card Fraud Detection — Python Dependencies
+# Install with: pip install -r requirements.txt
+# ──────────────────────────────────────────────────────────────
+
+# Core data science
+pandas>=1.5.0
+numpy>=1.23.0
+
+# Visualization
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# Machine learning
+scikit-learn>=1.2.0
+
+# Class imbalance handling (SMOTE)
+imbalanced-learn>=0.10.0
+
+# Jupyter environment
+jupyter>=1.0.0
+notebook>=6.5.0
+ipykernel>=6.0.0

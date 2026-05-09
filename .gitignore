@@ -1,0 +1,82 @@
+# ──────────────────────────────────────────────────────────────
+# .gitignore — Credit Card Fraud Detection Project
+# ──────────────────────────────────────────────────────────────
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# ── Virtual Environments ──────────────────────────────────────
+venv/
+env/
+ENV/
+.venv/
+.env/
+myenv/
+
+# ── Jupyter Notebook ──────────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# ── Trained Model Files (large binaries) ─────────────────────
+# Uncomment these lines if your .pkl files are very large:
+# *.pkl
+# *.joblib
+
+# ── IDE & Editor Files ────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── OS Files ──────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# ── Logs & Temporary Files ────────────────────────────────────
+*.log
+*.tmp
+*.temp
+logs/
+
+# ── Environment Variables ─────────────────────────────────────
+.env
+.env.local
+.env.production
+
+# ── Large Data Files (if using large datasets) ────────────────
+# Uncomment if your dataset is large (>50MB):
+# data/*.csv
+# data/*.xlsx
+# data/*.parquet
+
+# ── Output Files (auto-generated, not needed in repo) ─────────
+*.png
+*.jpg
+*.jpeg
+# Note: Keep images/ folder but ignore auto-generated chart PNGs
+# If you want to include your saved charts, comment the lines above

@@ -1,0 +1,187 @@
+# GITHUB UPLOAD GUIDE — Step by Step
+# Read this before pushing your project
+
+================================================
+STEP 1: PREREQUISITES — Install These First
+================================================
+
+Before anything else, make sure you have:
+
+1. Git installed → https://git-scm.com/downloads
+   Verify: open VS Code terminal → type: git --version
+
+2. GitHub account → https://github.com
+
+3. VS Code installed → https://code.visualstudio.com
+
+================================================
+STEP 2: CREATE REPOSITORY ON GITHUB
+================================================
+
+1. Go to https://github.com
+2. Click the "+" icon (top right) → "New repository"
+3. Fill in:
+   - Repository name: credit-card-fraud-detection
+   - Description: End-to-end ML project for credit card fraud detection using Logistic Regression, SMOTE, and EDA
+   - Visibility: Public (so people can see it)
+   - DO NOT check "Add a README file" (we already have one)
+   - DO NOT check "Add .gitignore" (we already have one)
+4. Click "Create repository"
+5. Copy the repository URL shown on screen
+   It looks like: https://github.com/YOUR_USERNAME/credit-card-fraud-detection.git
+
+================================================
+STEP 3: OPEN YOUR PROJECT IN VS CODE
+================================================
+
+1. Open VS Code
+2. File → Open Folder → select your "credit-card-fraud-detection" folder
+3. Open the Git Bash terminal:
+   Terminal → New Terminal
+   Then click the dropdown arrow next to "+" in the terminal panel
+   Select "Git Bash"
+
+================================================
+STEP 4: CONFIGURE GIT (First Time Only)
+================================================
+
+In the Git Bash terminal, type these commands one by one:
+
+  git config --global user.name "Your Full Name"
+  git config --global user.email "your-email@gmail.com"
+
+Replace with your actual name and the email used for GitHub.
+
+================================================
+STEP 5: INITIALIZE GIT IN YOUR PROJECT
+================================================
+
+Make sure you are inside the project folder in the terminal.
+You should see something like: /c/Users/YourName/credit-card-fraud-detection
+
+Type this command:
+
+  git init
+
+You will see: "Initialized empty Git repository"
+
+================================================
+STEP 6: ADD YOUR FILES TO GIT
+================================================
+
+This command stages ALL files for commit:
+
+  git add .
+
+The dot (.) means "add everything in this folder."
+
+To verify what got staged:
+
+  git status
+
+You should see all your files listed in green.
+
+================================================
+STEP 7: MAKE YOUR FIRST COMMIT
+================================================
+
+A commit is like saving a checkpoint with a message:
+
+  git commit -m "Initial commit: Add complete fraud detection ML project"
+
+You will see a list of files that were committed.
+
+================================================
+STEP 8: CONNECT TO YOUR GITHUB REPOSITORY
+================================================
+
+Now link your local project to the GitHub repo you created:
+
+  git remote add origin https://github.com/YOUR_USERNAME/credit-card-fraud-detection.git
+
+Replace YOUR_USERNAME with your actual GitHub username.
+
+Verify it was added:
+
+  git remote -v
+
+You should see "origin" listed twice (fetch and push).
+
+================================================
+STEP 9: RENAME BRANCH TO MAIN (IMPORTANT)
+================================================
+
+GitHub now uses "main" as the default branch name:
+
+  git branch -M main
+
+================================================
+STEP 10: PUSH TO GITHUB
+================================================
+
+This uploads your project to GitHub:
+
+  git push -u origin main
+
+If prompted for GitHub credentials:
+- Username: your GitHub username
+- Password: use a GitHub Personal Access Token (NOT your GitHub password)
+
+HOW TO CREATE A PERSONAL ACCESS TOKEN:
+1. Go to GitHub → Settings (click your profile picture)
+2. Scroll down → Developer settings
+3. Personal access tokens → Tokens (classic)
+4. Generate new token (classic)
+5. Give it a name, set expiry, check "repo" scope
+6. Copy the token (save it somewhere — you only see it once!)
+7. Use this token as your password when Git asks
+
+================================================
+STEP 11: VERIFY YOUR UPLOAD
+================================================
+
+Go to: https://github.com/YOUR_USERNAME/credit-card-fraud-detection
+
+You should see all your files and the README displayed beautifully!
+
+================================================
+FUTURE UPDATES (When You Make Changes)
+================================================
+
+Every time you update files and want to sync to GitHub:
+
+  git add .
+  git commit -m "Your description of what changed"
+  git push
+
+That's it — three commands every time.
+
+================================================
+FULL COMMAND SEQUENCE (Quick Reference)
+================================================
+
+  git init
+  git add .
+  git commit -m "Initial commit: Add complete fraud detection ML project"
+  git remote add origin https://github.com/YOUR_USERNAME/credit-card-fraud-detection.git
+  git branch -M main
+  git push -u origin main
+
+================================================
+TROUBLESHOOTING
+================================================
+
+ERROR: "remote origin already exists"
+FIX:  git remote remove origin
+      Then re-run: git remote add origin <URL>
+
+ERROR: "failed to push — rejected"
+FIX:  git pull origin main --allow-unrelated-histories
+      Then: git push -u origin main
+
+ERROR: "Authentication failed"
+FIX:  Use a Personal Access Token as password (see Step 10 above)
+
+ERROR: Large file rejected (>100MB)
+FIX:  Add the file to .gitignore before committing
+
